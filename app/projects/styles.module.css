@@ -1,0 +1,48 @@
+.container {
+    min-height: calc(100vh - 68px - 176.20px);
+    padding: 0 120px 100px 120px;
+}
+
+.container h3 {
+    text-align: center;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: -1px;
+    font-size: 2rem;
+    margin: 0;
+    color: #04526e;
+    margin-top: 40px;
+}
+
+.cards {
+    margin-top: 50px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center; 
+    column-gap: 30px;
+    row-gap: 50px;  
+}
+
+.card {
+    margin-bottom: 30px; 
+}
+
+@media screen and (max-width: 680px) { 
+
+    .container {
+        padding: 0 60px 100px 60px;
+    }
+    
+}
+
+@media screen and (max-width: 680px) { 
+
+    .container {
+        padding: 0 20px 100px 20px;
+    }
+    
+}
+
+

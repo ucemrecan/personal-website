@@ -1,0 +1,67 @@
+{   
+    "images": [
+      {
+        "title": "Arbay Design Web page",
+        "src": "/arbay.png",
+        "alt": "arbay-design",
+        "hrefWebsite": "http://www.arbaydesign.com/",
+        "hrefGithub": "https://github.com/ucemrecan/arbay-design"
+      },
+      {
+        "title": "React Login Page",
+        "src": "/loginPage.png",
+        "alt": "react-login-page",
+        "hrefWebsite": "https://ucemrecan.github.io/react-login-page/",
+        "hrefGithub": "https://github.com/ucemrecan/react-login-page"
+      },
+      {
+        "title": "Movie App using API",
+        "src": "/movieApp.png",
+        "alt": "movie-app",
+        "hrefWebsite": "https://ucemrecan.github.io/movie-app-react/",
+        "hrefGithub": "https://github.com/ucemrecan/movie-app-react"
+      },
+      {
+        "title": "Quiz App",
+        "src": "/quizApp.png",
+        "alt": "quiz-app",
+        "hrefWebsite": "https://ucemrecan.github.io/quiz-app/",
+        "hrefGithub": "https://github.com/ucemrecan/quiz-app"
+      },
+      {
+        "title": "React Todo List",
+        "src": "/toDo.png",
+        "alt": "react-todo",
+        "hrefWebsite": "https://ucemrecan.github.io/react-to-do/",
+        "hrefGithub": "https://github.com/ucemrecan/react-to-do"
+      },
+      {
+        "title": "German Inflation Calculator",
+        "src": "/inflation.png",
+        "alt": "inflation-calculator",
+        "hrefWebsite": "https://ucemrecan.github.io/inflation-calculator/",
+        "hrefGithub": "https://github.com/ucemrecan/inflation-calculator"
+      },
+      {
+        "title": "Blog Page Backend Project",
+        "src": "/blog.png",
+        "alt": "blog-page",
+        "hrefWebsite": "https://github.com/ucemrecan/blog-page",
+        "hrefGithub": "https://blog-page-8fqq.onrender.com/"
+      },
+      {
+        "title": "React Text Generator using API",
+        "src": "/reactTextGenerator.png",
+        "alt": "react-text-generator",
+        "hrefWebsite": "https://ucemrecan.github.io/text-generator/",
+        "hrefGithub": "https://github.com/ucemrecan/text-generator"
+      },
+      {
+        "title": "Manager Generator for Turkish teams",
+        "src": "/tdGenerator.png",
+        "alt": "td-generator",
+        "hrefWebsite": "https://ucemrecan.github.io/td-generator/",
+        "hrefGithub": "https://github.com/ucemrecan/td-generator"
+      }
+    ]
+}

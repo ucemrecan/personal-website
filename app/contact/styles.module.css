@@ -1,0 +1,160 @@
+.container {
+    min-height: calc(100vh - 68px - 176.20px);
+    padding: 0 20rem;
+    color: #04526e;
+}
+
+.container h1 {
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: -1px;
+    font-size: 2rem;
+    margin-bottom: 0;
+    color: #04526e;
+    border-bottom: solid 2px #04526e;
+    padding: 15px 0;
+    margin-top: 0;
+}
+
+.containerItems {
+    display: flex;
+    flex-direction: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-top: 50px;
+}
+
+.mail, .socials {
+    display: flex;
+    flex-direction: wrap;
+    width: 100%;
+}
+
+
+.mail a, .socials a {
+    position: relative;
+    text-decoration: none;
+    margin-left: 40px;
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.mail a::before {
+    content: "";
+    height: 0.15rem;
+    width: 100%;
+    position: absolute;
+    bottom:10px;
+    left:0;
+    background-color: #033f55;
+    transition: all 0.5s ease;
+    transform: scale(0);
+}
+
+.mail a:hover::before {
+    transform: scale(1);
+}
+
+.socials a::before {
+    content: "";
+    height: 0.15rem;
+    width: 100%;
+    position: absolute;
+    bottom:-5px;
+    left:0;
+    background-color: #033f55;
+    transition: all 0.5s ease;
+    transform: scale(0);
+}
+
+.socials a:hover::before {
+    transform: scale(1);
+}
+
+.mail h3, .socials h3 {
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    margin-top: 0;
+}
+
+.socialItems {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.icons {
+    margin-right: 5px;
+    margin-top: 5px;
+}
+
+@media screen and (max-width: 1370px) {
+
+    .container {
+        min-height: calc(100vh - 68px - 136.20px);
+        padding: 0 15rem;
+    }
+
+  }
+
+  @media screen and (max-width: 1140px) {
+
+    .container {
+        min-height: calc(100vh - 68px - 116.20px);
+        padding: 0 10rem;
+    }
+
+
+
+  }
+
+  @media screen and (max-width: 980px) {
+
+    .container {
+        padding: 0 5rem;
+    }
+
+  }
+
+  @media screen and (max-width: 820px) {
+
+    .container {
+        padding: 3rem 5rem;
+    }
+
+    .containerItems {
+        flex-direction: column;
+    }
+
+    .mail, .socials {
+        justify-content: space-between;
+    }
+
+    .socials {
+        margin-top: 50px;
+    }
+
+    
+  }
+
+  @media screen and (max-width: 500px) {
+
+    .container {
+        padding: 3rem 2rem;
+    }
+  }
+
+  @media screen and (max-width: 370px) {
+    .mail h3, .socials h3 {
+        font-size: 1rem;
+    }
+
+    .mail a, .socials a {
+        font-size: 0.9rem;
+        margin-left: 20px;
+    }
+    .mail, .socials {
+        justify-content: flex-start;
+    }
+
+  }

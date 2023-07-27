@@ -1,0 +1,127 @@
+.container {
+    padding: 120px 120px 0 120px;
+    display: flex;
+    flex-direction: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.rightNav {
+    position: relative;
+    display: flex;
+    flex-direction: wrap;
+    align-items: center;
+}
+
+.rightNav button {
+    font-size: 20px;
+    padding: 0 15px;
+    text-decoration: none;
+    border:none;
+    outline: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.rightNav p {
+    padding-bottom: 5px;
+    font-size: 16px;
+    opacity: 0.8;
+}
+
+.menuContainer {
+    padding: 20px 20px 20px 40px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 250px;
+    height: 280px;
+    background-color: #fff;
+    -webkit-box-shadow: 1px 1px 7px 0px rgba(0,0,0,0.17);
+    -moz-box-shadow: 1px 1px 7px 0px rgba(0,0,0,0.17);
+    box-shadow: 1px 1px 7px 0px rgba(0,0,0,0.17);
+    z-index: 999;
+}
+
+.menuItems {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.menuItems a {
+    text-decoration: none;
+}
+
+.menuItems p {
+    position: relative;
+    color:rgb(8, 8, 179);
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+
+.menuItems p::before {
+    content: "";
+    position: absolute;
+    top: 8px;
+    left:0;
+    width: 30%;
+    border-bottom: rgb(17, 17, 158) 10px  solid ;
+    opacity: 0.4;
+    transform: scale(0);
+    transition: all 0.5s ease;
+}
+
+.menuItems p:hover::before {
+    transform: scale(1);
+}
+
+.menuItems p span{
+    font-size: 0.9rem;
+    font-weight: 400;
+    margin-right: 20px;
+}
+
+.closeIcon {
+    text-align: right;
+    padding-right: 20px;
+}
+
+.closeIcon button {
+    color: rgb(8, 8, 179);
+    font-size: 1.5rem;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 1180px) {
+    .container {
+        padding: 80px 80px 0 80px;
+    }
+  }
+
+@media screen and (max-width: 880px) {
+    .container {
+        padding: 60px 60px 0 60px;
+    }
+    .rightNav a {
+        padding: 0 10px;
+    }
+
+@media screen and (max-width: 580px) {
+        .container {
+            padding: 20px 20px 0 20px;
+        }
+        
+        .menuContainer {
+            width: 180px;
+            height: 280px;
+        }
+
+        .closeIcon {
+            padding-right: 0;
+        } 
+        
+  }}
