@@ -5,9 +5,13 @@ import styles from "./styles.module.css";
 import { CiDark, CiMenuFries } from "react-icons/ci";
 import { AiOutlineClose } from "react-icons/ai";
 import { useState } from "react";
+import { useRouter } from "next/navigation";
 
-export default function Header() {
+export default function Header({ handleDarkMode }) {
   const [isClickedMenu, setIsClickedMenu] = useState(false);
+  const router = useRouter();
+  const { locale, locales, defaultLocale } = router;
+  console.log(router);
 
   function handleClickMenu() {
     setIsClickedMenu(true);
@@ -45,13 +49,15 @@ export default function Header() {
         </div>
         <div className={styles.rightNav}>
           <button>
-            <p>EN</p>
+            <Link href="/" locale={locale}>
+              EN
+            </Link>
           </button>
           <button>
-            <CiDark />
+            <CiDark onClick={handleDarkMode} />
           </button>
           <button>
-            <CiMenuFries onClick={handleClickMenu} />
+            <CiMenuFries />
           </button>
 
           {isClickedMenu ? (
