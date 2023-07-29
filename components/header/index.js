@@ -6,16 +6,16 @@ import { CiDark, CiMenuFries } from "react-icons/ci";
 import { AiOutlineClose } from "react-icons/ai";
 import { useState } from "react";
 import { useRouter } from "next/navigation";
+import { useDispatch } from "react-redux";
+import { toggleDarkMode } from "@/redux/features/darkModeSlice";
 
-export default function Header({ handleDarkMode }) {
+export default function Header() {
+  const dispatch = useDispatch();
+
   const [isClickedMenu, setIsClickedMenu] = useState(false);
   const router = useRouter();
   const { locale, locales, defaultLocale } = router;
-  console.log(router);
-
-  function handleClickMenu() {
-    setIsClickedMenu(true);
-  }
+  console.log(locale);
 
   function handleClickCloseMenu() {
     setIsClickedMenu(false);
@@ -23,6 +23,10 @@ export default function Header({ handleDarkMode }) {
 
   function handleClickMenuItem() {
     setIsClickedMenu(false);
+  }
+
+  function handleMenu() {
+    setIsClickedMenu(true);
   }
 
   return (
@@ -54,10 +58,10 @@ export default function Header({ handleDarkMode }) {
             </Link>
           </button>
           <button>
-            <CiDark onClick={handleDarkMode} />
+            <CiDark onClick={() => dispatch(toggleDarkMode())} />
           </button>
           <button>
-            <CiMenuFries />
+            <CiMenuFries onClick={handleMenu} />
           </button>
 
           {isClickedMenu ? (

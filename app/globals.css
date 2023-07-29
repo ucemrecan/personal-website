@@ -1,7 +1,10 @@
 body {
   margin: 0;
   box-sizing: border-box;
-  background-image: url("/bg.png");
-  background-size: cover;
 }
 
+.backgroundImage {
+  background-image: url("/bg.png");
+  background-size: cover;
+  
+}

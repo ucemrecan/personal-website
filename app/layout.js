@@ -1,7 +1,10 @@
+"use client";
 import Header from "@/components/header";
 import "./globals.css";
 import { Montserrat } from "next/font/google";
 import Footer from "@/components/footer";
+import ReduxProvider from "@/components/redux-provider";
+import Background from "@/components/background-image";
 
 const montserrat = Montserrat({ subsets: ["latin"] });
 
@@ -14,9 +17,13 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={montserrat.className}>
-        <Header />
-        <main>{children}</main>
-        <Footer />
+        <ReduxProvider>
+          <Background>
+            <Header />
+            <main>{children}</main>
+            <Footer />
+          </Background>
+        </ReduxProvider>
       </body>
     </html>
   );
