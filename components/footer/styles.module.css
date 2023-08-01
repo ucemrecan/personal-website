@@ -10,9 +10,13 @@
     align-items: center;
 }
 
-.socials {
+.socialsDark, .socialsLight {
     font-size: 1.4rem;
     margin: 0 15px;
+}
+
+.socialsDark {
+    color: #c0b6b6;
 }
 
 @media screen and (max-width: 580px) {

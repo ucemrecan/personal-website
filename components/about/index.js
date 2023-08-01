@@ -14,8 +14,13 @@ export default function About() {
   return (
     <div className={styles.container}>
       <div className={styles.content}>
-        <h3>Hakkımda</h3>
-        <p>
+        <h3
+          className={
+            isClickedDarkMode ? styles.darkModeHeading : styles.lightModeHeading
+          }>
+          Hakkımda
+        </h3>
+        <p style={{ color: isClickedDarkMode ? "#F7E7D4" : "#04526e" }}>
           Ben inşaat mühendisliği mezunu bir Jr. Frontend Developer’ım. İnşaat
           mühendisliğinde birkaç yıl çalıştıktan sonra yazılım sektörüne geçiş
           yapmaya karar verdim. Veri bilimi, makine öğrenmesi, full stack
@@ -26,7 +31,10 @@ export default function About() {
           ediyorum.
         </p>
         <Link
-          className={styles.link}
+          className={
+            isClickedDarkMode ? styles.darkModeLink : styles.lightModeLink
+          }
+          style={{ color: isClickedDarkMode ? "#F7E7D4" : "#022e3d" }}
           href="https://drive.google.com/file/d/1qoYVVhzJRJy-N8eJiCweRdz_hjVgbr02/view?usp=sharing">
           <BsArrowDown />
           <p>özgeçmiş</p>
