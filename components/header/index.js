@@ -5,35 +5,25 @@ import styles from "./styles.module.css";
 import { CiDark, CiLight } from "react-icons/ci";
 import { SlMenu } from "react-icons/sl";
 import { AiOutlineClose } from "react-icons/ai";
-import { useState } from "react";
-import { useRouter } from "next/navigation";
+// import { useRouter } from "next/navigation";
 import { useDispatch } from "react-redux";
 import {
+  toggleMenu,
+  isMenuActive,
   toggleDarkMode,
   isDarkModeEnabled,
-} from "@/redux/features/darkModeSlice";
+} from "@/redux/features/buttonSlice";
 import { useSelector } from "react-redux";
 
 export default function Header() {
   const dispatch = useDispatch();
   const isClickedDarkMode = useSelector(isDarkModeEnabled);
+  const isClickedMenu = useSelector(isMenuActive);
 
-  const [isClickedMenu, setIsClickedMenu] = useState(false);
-  const router = useRouter();
-  const { locale, locales, defaultLocale } = router;
-  console.log(locale);
-
-  function handleClickCloseMenu() {
-    setIsClickedMenu(false);
-  }
-
-  function handleClickMenuItem() {
-    setIsClickedMenu(false);
-  }
-
-  function handleMenu() {
-    setIsClickedMenu(true);
-  }
+  // Router
+  // const router = useRouter();
+  // const { locales, locale: activeLocale } = router;
+  // console.log(locales);
 
   return (
     <div className={styles.positionAbsolute}>
@@ -77,9 +67,7 @@ export default function Header() {
         </div>
         <div className={styles.rightNav}>
           <button>
-            <Link href="/" locale={locale}>
-              EN
-            </Link>
+            <Link href="/">EN</Link>
           </button>
           <button>
             {isClickedDarkMode ? (
@@ -93,7 +81,7 @@ export default function Header() {
           </button>
           <button>
             <SlMenu
-              onClick={handleMenu}
+              onClick={() => dispatch(toggleMenu())}
               style={{ color: isClickedDarkMode ? "#fff" : "" }}
             />
           </button>
@@ -101,30 +89,30 @@ export default function Header() {
           {isClickedMenu ? (
             <div className={styles.menuContainer}>
               <div className={styles.closeIcon}>
-                <button onClick={handleClickCloseMenu}>
+                <button onClick={() => dispatch(toggleMenu())}>
                   <AiOutlineClose />
                 </button>
               </div>
               <div className={styles.menuItems}>
-                <Link href="/" onClick={handleClickMenuItem}>
+                <Link href="/" onClick={() => dispatch(toggleMenu())}>
                   <p>
                     <span>01</span>Anasayfa
                   </p>
                 </Link>
 
-                <Link href="/about" onClick={handleClickMenuItem}>
+                <Link href="/about" onClick={() => dispatch(toggleMenu())}>
                   <p>
                     <span>02</span>Hakkımda
                   </p>
                 </Link>
 
-                <Link href="/projects" onClick={handleClickMenuItem}>
+                <Link href="/projects" onClick={() => dispatch(toggleMenu())}>
                   <p>
                     <span>03</span>Projelerim
                   </p>
                 </Link>
 
-                <Link href="/contact" onClick={handleClickMenuItem}>
+                <Link href="/contact" onClick={() => dispatch(toggleMenu())}>
                   <p>
                     <span>04</span>Iletisim
                   </p>

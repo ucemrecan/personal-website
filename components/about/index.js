@@ -1,6 +1,6 @@
 "use client";
 import { useSelector } from "react-redux";
-import { isDarkModeEnabled } from "@/redux/features/darkModeSlice";
+import { isDarkModeEnabled } from "@/redux/features/buttonSlice";
 import styles from "./styles.module.css";
 import Link from "next/link";
 import { BsArrowDown } from "react-icons/bs";

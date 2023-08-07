@@ -4,7 +4,7 @@ import Card from "@/components/card";
 import styles from "./styles.module.css";
 import projects from "@/service/projects.json";
 import { useSelector } from "react-redux";
-import { isDarkModeEnabled } from "@/redux/features/darkModeSlice";
+import { isDarkModeEnabled } from "@/redux/features/buttonSlice";
 
 export default function Projects() {
   const isClickedDarkMode = useSelector(isDarkModeEnabled);

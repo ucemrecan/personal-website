@@ -7,7 +7,7 @@ import { TfiTwitter } from "react-icons/tfi";
 import { SlSocialLinkedin } from "react-icons/sl";
 import { CiMail } from "react-icons/ci";
 import { useSelector } from "react-redux";
-import { isDarkModeEnabled } from "@/redux/features/darkModeSlice";
+import { isDarkModeEnabled } from "@/redux/features/buttonSlice";
 
 export default function Footer() {
   const isClickedDarkMode = useSelector(isDarkModeEnabled);

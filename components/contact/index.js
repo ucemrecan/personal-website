@@ -4,7 +4,7 @@ import styles from "./styles.module.css";
 import Link from "next/link";
 import { FiArrowUpRight } from "react-icons/fi";
 import { useSelector } from "react-redux";
-import { isDarkModeEnabled } from "@/redux/features/darkModeSlice";
+import { isDarkModeEnabled } from "@/redux/features/buttonSlice";
 
 export default function Contact() {
   const isClickedDarkMode = useSelector(isDarkModeEnabled);

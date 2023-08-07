@@ -4,7 +4,7 @@ import React from "react";
 import styles from "./styles.module.css";
 import { HiArrowNarrowRight } from "react-icons/hi";
 import { useSelector } from "react-redux";
-import { isDarkModeEnabled } from "@/redux/features/darkModeSlice";
+import { isDarkModeEnabled } from "@/redux/features/buttonSlice";
 
 export default function Main() {
   const isClickedDarkMode = useSelector(isDarkModeEnabled);
