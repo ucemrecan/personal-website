@@ -6,18 +6,15 @@ import { HiArrowNarrowRight } from "react-icons/hi";
 import { useSelector } from "react-redux";
 import { isDarkModeEnabled } from "@/redux/features/buttonSlice";
 
-export default function Main() {
+export default function Main({ heading, title, about, project }) {
   const isClickedDarkMode = useSelector(isDarkModeEnabled);
 
   return (
     <div
       className={styles.container}
       style={{ color: isClickedDarkMode ? "#F7E7D4" : "#04526e" }}>
-      <h1>Merhaba, ben Umut Cemre</h1>
-      <p>
-        Jr. Frontend Developer&rsquo;ım, React(NextJS) ile projeler
-        geliştirmekteyim.
-      </p>
+      <h1>{heading}</h1>
+      <p>{title}</p>
       <div className={styles.links}>
         <Link
           className={
@@ -25,7 +22,7 @@ export default function Main() {
           }
           href="/about">
           <HiArrowNarrowRight />
-          <p>hakkımda</p>
+          <p>{about}</p>
         </Link>
         <Link
           className={
@@ -33,7 +30,7 @@ export default function Main() {
           }
           href="/projects">
           <HiArrowNarrowRight />
-          <p>projelerim</p>
+          <p>{project}</p>
         </Link>
       </div>
     </div>

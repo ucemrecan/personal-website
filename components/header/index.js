@@ -1,29 +1,29 @@
 "use client";
-import Link from "next/link";
+import Link from "next-intl/link";
 import React from "react";
 import styles from "./styles.module.css";
 import { CiDark, CiLight } from "react-icons/ci";
 import { SlMenu } from "react-icons/sl";
 import { AiOutlineClose } from "react-icons/ai";
-// import { useRouter } from "next/navigation";
 import { useDispatch } from "react-redux";
 import {
   toggleMenu,
   isMenuActive,
   toggleDarkMode,
   isDarkModeEnabled,
+  toggleLang,
 } from "@/redux/features/buttonSlice";
 import { useSelector } from "react-redux";
+import { useLocale } from "next-intl";
+import { usePathname } from "next/navigation";
 
 export default function Header() {
   const dispatch = useDispatch();
   const isClickedDarkMode = useSelector(isDarkModeEnabled);
   const isClickedMenu = useSelector(isMenuActive);
-
-  // Router
-  // const router = useRouter();
-  // const { locales, locale: activeLocale } = router;
-  // console.log(locales);
+  const locale = useLocale();
+  const pathname = usePathname();
+  const trPathname = pathname.substring(0, 1) + pathname.substring(3);
 
   return (
     <div className={styles.positionAbsolute}>
@@ -67,7 +67,43 @@ export default function Header() {
         </div>
         <div className={styles.rightNav}>
           <button>
-            <Link href="/">EN</Link>
+            {isClickedDarkMode ? (
+              locale === "tr" ? (
+                <Link
+                  className={styles.langLink}
+                  href={pathname}
+                  locale="en"
+                  onClick={() => dispatch(toggleLang())}
+                  style={{ color: "#fff" }}>
+                  EN
+                </Link>
+              ) : (
+                <Link
+                  className={styles.langLink}
+                  href={trPathname}
+                  locale="tr"
+                  onClick={() => dispatch(toggleLang())}
+                  style={{ color: "#fff" }}>
+                  TR
+                </Link>
+              )
+            ) : locale === "tr" ? (
+              <Link
+                className={styles.langLink}
+                href={pathname}
+                locale="en"
+                onClick={() => dispatch(toggleLang())}>
+                EN
+              </Link>
+            ) : (
+              <Link
+                className={styles.langLink}
+                href={trPathname}
+                locale="tr"
+                onClick={() => dispatch(toggleLang())}>
+                TR
+              </Link>
+            )}
           </button>
           <button>
             {isClickedDarkMode ? (
@@ -96,25 +132,29 @@ export default function Header() {
               <div className={styles.menuItems}>
                 <Link href="/" onClick={() => dispatch(toggleMenu())}>
                   <p>
-                    <span>01</span>Anasayfa
+                    <span>01</span>
+                    {locale === "tr" ? "Anasayfa" : "Homepage"}
                   </p>
                 </Link>
 
                 <Link href="/about" onClick={() => dispatch(toggleMenu())}>
                   <p>
-                    <span>02</span>Hakkımda
+                    <span>02</span>
+                    {locale === "tr" ? "Hakkımda" : "About"}
                   </p>
                 </Link>
 
                 <Link href="/projects" onClick={() => dispatch(toggleMenu())}>
                   <p>
-                    <span>03</span>Projelerim
+                    <span>03</span>
+                    {locale === "tr" ? "Projelerim" : "My Projects"}
                   </p>
                 </Link>
 
                 <Link href="/contact" onClick={() => dispatch(toggleMenu())}>
                   <p>
-                    <span>04</span>Iletisim
+                    <span>04</span>
+                    {locale === "tr" ? "Iletisim" : "Contact"}
                   </p>
                 </Link>
               </div>

@@ -1,0 +1,21 @@
+{
+  "Main": {
+    "heading": "Hi, I'm Umut Cemre",
+    "title": "I'm a Frontend Developer, specializing in React (NextJS) projects.",
+    "about": "about",
+    "project": "projects"
+  },
+  "About": {
+    "heading": "About Me",
+    "content": "I am a Frontend Developer with a background in civil engineering. After working in civil engineering for a few years, I decided to switch to the software industry. I attended bootcamps and courses in various software fields such as data science, machine learning, and full stack development to improve my skills. Eventually, I chose to focus on the front-end sector. I usually develop my projects using React, and I am currently actively learning Next.js.",
+    "cv": "resume"
+  },
+  "Projects": {
+    "heading": "My Projects"
+  },
+  "Contacts": {
+    "heading": "Contact",
+    "mail": "email",
+    "socials": "social media"
+  }
+}

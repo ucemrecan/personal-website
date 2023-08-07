@@ -8,7 +8,7 @@ import Image from "next/image";
 import Profile from "@/public/profil.png";
 import React from "react";
 
-export default function About() {
+export default function About({ heading, content, cv }) {
   const isClickedDarkMode = useSelector(isDarkModeEnabled);
 
   return (
@@ -18,17 +18,10 @@ export default function About() {
           className={
             isClickedDarkMode ? styles.darkModeHeading : styles.lightModeHeading
           }>
-          Hakkımda
+          {heading}
         </h3>
         <p style={{ color: isClickedDarkMode ? "#F7E7D4" : "#04526e" }}>
-          Ben inşaat mühendisliği mezunu bir Jr. Frontend Developer’ım. İnşaat
-          mühendisliğinde birkaç yıl çalıştıktan sonra yazılım sektörüne geçiş
-          yapmaya karar verdim. Veri bilimi, makine öğrenmesi, full stack
-          development gibi çeşitli yazılım alanlarında bootcamplere ve kurslara
-          katılarak kendimi geliştirmeye çalıştım. Sonunda, front-end sektörüne
-          odaklanma kararı aldım. Genellikle projelerimi React kullanarak
-          geliştiriyorum ve şu anda aktif olarak Next.js öğrenmeye devam
-          ediyorum.
+          {content}
         </p>
         <Link
           className={
@@ -37,7 +30,7 @@ export default function About() {
           style={{ color: isClickedDarkMode ? "#F7E7D4" : "#022e3d" }}
           href="https://drive.google.com/file/d/1qoYVVhzJRJy-N8eJiCweRdz_hjVgbr02/view?usp=sharing">
           <BsArrowDown />
-          <p>özgeçmiş</p>
+          <p>{cv}</p>
         </Link>
       </div>
 

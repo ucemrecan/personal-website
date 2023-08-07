@@ -6,7 +6,7 @@ import { FiArrowUpRight } from "react-icons/fi";
 import { useSelector } from "react-redux";
 import { isDarkModeEnabled } from "@/redux/features/buttonSlice";
 
-export default function Contact() {
+export default function Contact({ heading, mail, socials }) {
   const isClickedDarkMode = useSelector(isDarkModeEnabled);
 
   return (
@@ -17,11 +17,11 @@ export default function Contact() {
         className={
           isClickedDarkMode ? styles.darkModeHeading : styles.lightModeHeading
         }>
-        Iletisim
+        {heading}
       </h1>
       <div className={styles.containerItems}>
         <div className={styles.mail}>
-          <h3>mail</h3>
+          <h3>{mail}</h3>
           <Link
             href="mailto:ucemrecan@gmail.com"
             className={
@@ -32,7 +32,7 @@ export default function Contact() {
           </Link>
         </div>
         <div className={styles.socials}>
-          <h3>sosyal medya</h3>
+          <h3>{socials}</h3>
           <div className={styles.socialItems}>
             <Link
               href="https://github.com/ucemrecan"
@@ -47,8 +47,7 @@ export default function Contact() {
               className={
                 isClickedDarkMode ? styles.darkModeLink : styles.lightModeLink
               }>
-              <FiArrowUpRight className={styles.icons} />
-              twitter
+              <FiArrowUpRight className={styles.icons} />x
             </Link>
             <Link
               href="https://www.linkedin.com/in/ucemrecan/"

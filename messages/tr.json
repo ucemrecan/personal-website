@@ -1,0 +1,21 @@
+{
+    "Main": {
+      "heading": "Merhaba, ben Umut Cemre",
+      "title": "Frontend Developer'ım ve React(NextJS) ile projeler geliştirmekteyim.",
+      "about": "hakkımda",
+      "project": "projelerim"
+    },
+    "About": {
+      "heading": "Hakkımda",
+      "content": "Ben inşaat mühendisliği mezunu bir Frontend Developer’ım. İnşaat mühendisliğinde birkaç yıl çalıştıktan sonra yazılım sektörüne geçiş yapmaya karar verdim. Veri bilimi, makine öğrenmesi, full stack development gibi çeşitli yazılım alanlarında bootcamplere ve kurslara katılarak kendimi geliştirmeye çalıştım. Sonunda, front-end sektörüne odaklanma kararı aldım. Genellikle projelerimi React kullanarak geliştiriyorum ve şu anda aktif olarak Next.js öğrenmeye devam ediyorum.",
+      "cv": "özgeçmiş"
+    },
+    "Projects": {
+      "heading": "Projelerim"
+    },
+    "Contacts": {
+      "heading": "Iletisim",
+      "mail": "mail",
+      "socials": "sosyal medya"
+    }
+  }
