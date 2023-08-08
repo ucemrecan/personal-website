@@ -5,7 +5,7 @@ export const buttonSlice = createSlice({
   initialState: {
     isDarkModeEnabled: false,
     isMenuActive: false,
-    isTurkishLangActive: true,
+    isTurkishLangActive: false,
   },
   reducers: {
     toggleDarkMode: (state) => {

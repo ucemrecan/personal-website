@@ -17,5 +17,10 @@
       "heading": "Iletisim",
       "mail": "mail",
       "socials": "sosyal medya"
+    },
+    "NotFound": {
+      "heading": "Aradığınız sayfa bulunamadı.",
+      "title": "Lütfen doğru bir URL girdiğinizden emin olun.",
+      "linkTitle": "Anasayfaya dön..."
     }
   }

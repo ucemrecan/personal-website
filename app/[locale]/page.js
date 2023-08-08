@@ -1,7 +1,7 @@
 import Main from "@/components/main";
 import { useTranslations } from "next-intl";
 
-export default function Home() {
+export default function Home({ params, searchParams }) {
   const t = useTranslations("Main");
 
   return (

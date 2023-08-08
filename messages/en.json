@@ -17,5 +17,10 @@
     "heading": "Contact",
     "mail": "email",
     "socials": "social media"
+  },
+  "NotFound": {
+    "heading": "Page Not Found",
+    "title": "Please make sure you entered the correct URL.",
+    "linkTitle": "Go back to the homepage..."
   }
 }

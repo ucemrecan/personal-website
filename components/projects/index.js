@@ -8,7 +8,6 @@ import { isDarkModeEnabled } from "@/redux/features/buttonSlice";
 
 export default function Projects({ heading }) {
   const isClickedDarkMode = useSelector(isDarkModeEnabled);
-
   return (
     <div className={styles.container}>
       <h3 style={{ color: isClickedDarkMode ? "#F7E7D4" : "#04526e" }}>

@@ -66,7 +66,7 @@ export default function Header() {
           </Link>
         </div>
         <div className={styles.rightNav}>
-          <button>
+          <button style={{ paddingBottom: "8px" }}>
             {isClickedDarkMode ? (
               locale === "tr" ? (
                 <Link

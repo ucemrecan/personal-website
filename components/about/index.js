@@ -8,7 +8,7 @@ import Image from "next/image";
 import Profile from "@/public/profil.png";
 import React from "react";
 
-export default function About({ heading, content, cv }) {
+export default function AboutPage({ heading, content, cv }) {
   const isClickedDarkMode = useSelector(isDarkModeEnabled);
 
   return (
