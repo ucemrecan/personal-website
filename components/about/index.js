@@ -28,7 +28,8 @@ export default function AboutPage({ heading, content, cv }) {
             isClickedDarkMode ? styles.darkModeLink : styles.lightModeLink
           }
           style={{ color: isClickedDarkMode ? "#F7E7D4" : "#022e3d" }}
-          href="https://drive.google.com/file/d/1qoYVVhzJRJy-N8eJiCweRdz_hjVgbr02/view?usp=sharing">
+          href="https://flowcv.com/resume/kvsqflgqwa"
+          prefetch={false}>
           <BsArrowDown />
           <p>{cv}</p>
         </Link>
@@ -41,6 +42,7 @@ export default function AboutPage({ heading, content, cv }) {
           priority={true}
           placeholder="blur"
           fill
+          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
         />
       </div>
     </div>

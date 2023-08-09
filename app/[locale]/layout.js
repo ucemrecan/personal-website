@@ -7,7 +7,7 @@ import ReduxProvider from "@/components/redux-provider";
 import Background from "@/components/background-image";
 import { notFound } from "next/navigation";
 import { NextIntlClientProvider } from "next-intl";
-
+<link rel="preload" href="style.css" as="style" />;
 const montserrat = Montserrat({ subsets: ["latin"] });
 
 export default function LocaleLayout({ children, params: { locale } }) {
